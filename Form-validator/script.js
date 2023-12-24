@@ -16,8 +16,13 @@ function showSuccess(input){
     formControl.className = 'form-control success';
 }
 function isValidEmail(userEmail) {
-    var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
-    return filter.test(String(userEmail).toLowerCase());
+    const filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+    const isValid = filter.test(String(userEmail).toLowerCase());
+    if(!isValid){
+        showError(userEmail, `${getFieldName(userEmail)} is not valid!`);
+    }else{
+        showSuccess(userEmail);
+    }
 }
 function getFieldName(input){
     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
@@ -42,7 +47,10 @@ function checkLength(input, minLength , maxLength){
 }
 
 function checkPasswordMatch(password1, password2){
-    if(password1.value === password2.value){
+    if(password2.value.length == 0){
+        showError(password2, `${getFieldName(password2)} cannot be empty!`);
+    }
+    else if(password1.value === password2.value){
         showSuccess(password2);
     }else{
         showError(password2,`${getFieldName(password2)} must match with the ${getFieldName(password1)}`);
@@ -52,6 +60,7 @@ function checkPasswordMatch(password1, password2){
 form.addEventListener('submit', function(e){
     e.preventDefault(); 
     checkRequired([username,password,email,password2]);
+    isValidEmail(email);
     checkLength(username, 3, 15);
     checkLength(password, 6, 25);
     checkPasswordMatch(password,password2);
