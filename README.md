@@ -1,2 +1,2 @@
 # jsJourney
-Diving into the Javascript world push by push, commit by commit.
+Diving into the Javascript world commit by commit, push by push.
