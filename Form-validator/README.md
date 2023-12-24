@@ -3,7 +3,7 @@ Basic html registartion form with the javascript validation on the all the input
 
 1. Correct input :-- 
 
-![Alt text](Form-validator/finalResult/Correct Input.png)
+![Alt text](Form-validator/finalResult/Correct%20Input.png)
 
 2. Incorrect input : --
 
@@ -11,4 +11,4 @@ Basic html registartion form with the javascript validation on the all the input
 
 3. Final Form : --
 
-![Alt text](Form-validator/finalResult/final form.png)
+![Alt text](Form-validator/finalResult/final%20form.png)
