@@ -57,6 +57,23 @@ function checkPasswordMatch(password1, password2){
     }
 }
 
+// Event listeners for real-time validation
+username.addEventListener('input', function () {
+    checkLength(username, 3, 15);
+});
+
+email.addEventListener('input', function () {
+    isValidEmail(email);
+});
+
+password.addEventListener('input', function () {
+    checkLength(password, 6, 25);
+});
+
+password2.addEventListener('input', function () {
+    checkPasswordMatch(password, password2);
+});
+
 form.addEventListener('submit', function(e){
     e.preventDefault(); 
     checkRequired([username,password,email,password2]);
