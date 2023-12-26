@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+body{
+
+}
+.container{
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container .col{
+    width: ;
+}
