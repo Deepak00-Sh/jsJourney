@@ -9,5 +9,9 @@
     align-items: center;
     justify-content: center;
 }
-.container .col{
+.cardsDiv{
+    margin-bottom:50px;     
+}
+.tagline{
+    padding-bottom: 10px;
 }
