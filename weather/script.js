@@ -23,7 +23,7 @@ search.addEventListener('click', () => {
         error404.classList.add('fadeIn');
         return;
       }
-
+      //refactoring the error404 formatting 
       error404.style.display = 'none';
       error404.classList.remove('fadeIn');
 
