@@ -1,0 +1,1 @@
+#Basic weather application created using open-weather API and build using html, css and javascript
